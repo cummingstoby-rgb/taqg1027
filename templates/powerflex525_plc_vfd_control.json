@@ -1,0 +1,770 @@
+{
+  "id": "proj_584k00m_xktn",
+  "metadata": {
+    "title": "powerflex525 plc vfd control (VFD + PLC Integrated)",
+    "projectNumber": "VG-TPL-306",
+    "revision": "1.0",
+    "author": "VoltGrid TemplateImporter",
+    "standard": "JIC / NFPA 79",
+    "description": "Generated from PDF schematic \"powerflex525_plc_vfd_control.pdf\" — Allen-Bradley PowerFlex 525 (25B-D4P0N104)"
+  },
+  "sheets": [
+    {
+      "id": "sheet_ivfbpse_xktn",
+      "number": 1,
+      "name": "VFD Drive Control",
+      "voltageLabel": "24VDC",
+      "l1Label": "+24V",
+      "l2Label": "0V",
+      "rungCount": 6,
+      "components": [
+        {
+          "id": "c_p5z968t_xktm",
+          "type": "fuse",
+          "x": 160,
+          "y": 100,
+          "tag": "FU1",
+          "description": "Control Circuit Fuse 2A",
+          "manufacturer": "Bussmann",
+          "partNumber": "FNQ-R-2"
+        },
+        {
+          "id": "c_5p626mc_xktm",
+          "type": "estop_nc",
+          "x": 260,
+          "y": 100,
+          "tag": "ES1",
+          "description": "VFD Safe Torque Off E-Stop",
+          "manufacturer": "Schneider Electric",
+          "partNumber": "XB4BS8442",
+          "plcAddress": "%IX0.0"
+        },
+        {
+          "id": "c_r4os6uu_xktm",
+          "type": "pb_nc",
+          "x": 380,
+          "y": 100,
+          "tag": "PB1",
+          "description": "Drive Stop PB (NC)",
+          "manufacturer": "Allen-Bradley",
+          "partNumber": "800F-MP4D01",
+          "plcAddress": "%IX0.1"
+        },
+        {
+          "id": "c_64wrzui_xktm",
+          "type": "pb_no",
+          "x": 500,
+          "y": 100,
+          "tag": "PB2",
+          "description": "Drive Start PB (NO)",
+          "manufacturer": "Allen-Bradley",
+          "partNumber": "800F-MP3D10",
+          "plcAddress": "%QX0.0"
+        },
+        {
+          "id": "c_cq2jpsl_xktm",
+          "type": "terminal",
+          "x": 640,
+          "y": 100,
+          "tag": "TB1-1",
+          "description": "VFD DI1 Start Terminal",
+          "manufacturer": "Phoenix Contact",
+          "partNumber": "UT 2,5 (3044076)",
+          "terminalStrip": "TB1",
+          "terminalNumber": "1"
+        },
+        {
+          "id": "c_hbjzvwt_xktm",
+          "type": "coil_relay",
+          "x": 780,
+          "y": 100,
+          "tag": "CR1",
+          "description": "VFD Run Enable Relay",
+          "manufacturer": "Allen-Bradley",
+          "partNumber": "55.34.8.120.0040"
+        },
+        {
+          "id": "c_afrshdj_xktn",
+          "type": "contact_no",
+          "x": 500,
+          "y": 200,
+          "tag": "CR1",
+          "description": "VFD Run Seal-In Contact",
+          "manufacturer": "Schneider Electric",
+          "partNumber": "LADN11",
+          "parentTag": "CR1"
+        },
+        {
+          "id": "c_p034f46_xktn",
+          "type": "contact_no",
+          "x": 240,
+          "y": 300,
+          "tag": "CR1",
+          "description": "Run Permissive Contact",
+          "manufacturer": "Schneider Electric",
+          "partNumber": "LADN11",
+          "parentTag": "CR1"
+        },
+        {
+          "id": "c_odde4ik_xktn",
+          "type": "overload_nc",
+          "x": 420,
+          "y": 300,
+          "tag": "OL1",
+          "description": "VFD Fault Relay Contact (R1A-R1C)",
+          "manufacturer": "Schneider Electric",
+          "partNumber": "LRD16"
+        },
+        {
+          "id": "c_a47j7o9_xktn",
+          "type": "terminal",
+          "x": 600,
+          "y": 300,
+          "tag": "TB1-2",
+          "description": "VFD DI1 Command Bus",
+          "manufacturer": "Phoenix Contact",
+          "partNumber": "UT 2,5 (3044076)",
+          "terminalStrip": "TB1",
+          "terminalNumber": "2"
+        },
+        {
+          "id": "c_vf5y1m8_xktn",
+          "type": "vfd_cmd",
+          "x": 780,
+          "y": 300,
+          "tag": "VFD1",
+          "description": "PowerFlex 525 (25B-D4P0N104) Run Cmd",
+          "manufacturer": "Allen-Bradley",
+          "partNumber": "PowerFlex 525 (25B-D4P0N104)",
+          "plcAddress": "%QX0.0",
+          "vfdParam": "DI1-START"
+        },
+        {
+          "id": "c_37h5hcm_xktn",
+          "type": "contact_no",
+          "x": 240,
+          "y": 400,
+          "tag": "CR1",
+          "description": "VFD Active Interlock",
+          "manufacturer": "Schneider Electric",
+          "partNumber": "LADN11",
+          "parentTag": "CR1"
+        },
+        {
+          "id": "c_5xk1wqj_xktn",
+          "type": "selector_no",
+          "x": 420,
+          "y": 400,
+          "tag": "SS1",
+          "description": "FWD / REV Direction Selector",
+          "manufacturer": "Schneider Electric",
+          "partNumber": "XB4BD21"
+        },
+        {
+          "id": "c_dvt5ory_xktn",
+          "type": "terminal",
+          "x": 600,
+          "y": 400,
+          "tag": "TB1-3",
+          "description": "VFD DI2 Direction Terminal",
+          "manufacturer": "Phoenix Contact",
+          "partNumber": "UT 2,5 (3044076)",
+          "terminalStrip": "TB1",
+          "terminalNumber": "3"
+        },
+        {
+          "id": "c_ityavnz_xktn",
+          "type": "vfd_cmd",
+          "x": 780,
+          "y": 400,
+          "tag": "VFD2",
+          "description": "PowerFlex 525 (25B-D4P0N104) Reverse Cmd",
+          "manufacturer": "Allen-Bradley",
+          "partNumber": "PowerFlex 525 (25B-D4P0N104)",
+          "plcAddress": "%QX0.1",
+          "vfdParam": "DI2-REV (P062=7)"
+        },
+        {
+          "id": "c_z8d672g_xktn",
+          "type": "contact_no",
+          "x": 240,
+          "y": 500,
+          "tag": "CR1",
+          "description": "VFD Running Status",
+          "manufacturer": "Schneider Electric",
+          "partNumber": "LADN11",
+          "parentTag": "CR1"
+        },
+        {
+          "id": "c_pea1l26_xktn",
+          "type": "terminal",
+          "x": 520,
+          "y": 500,
+          "tag": "TB1-4",
+          "description": "Panel Run Indicator",
+          "manufacturer": "Phoenix Contact",
+          "partNumber": "UT 2,5 (3044076)",
+          "terminalStrip": "TB1",
+          "terminalNumber": "4"
+        },
+        {
+          "id": "c_t77ur3q_xktn",
+          "type": "pilot_light",
+          "x": 780,
+          "y": 500,
+          "tag": "PL1",
+          "description": "VFD Running Pilot Light",
+          "manufacturer": "Allen-Bradley",
+          "partNumber": "800F-P3G",
+          "pilotColor": "green"
+        },
+        {
+          "id": "c_nlms4y5_xktn",
+          "type": "contact_no",
+          "x": 240,
+          "y": 600,
+          "tag": "CR1",
+          "description": "Start Accel Monitor",
+          "manufacturer": "Schneider Electric",
+          "partNumber": "LADN11",
+          "parentTag": "CR1"
+        },
+        {
+          "id": "c_kfswwl6_xktn",
+          "type": "coil_ton",
+          "x": 780,
+          "y": 600,
+          "tag": "TR1",
+          "description": "VFD Ramp Stabilize Timer (4s)",
+          "manufacturer": "Omron",
+          "partNumber": "H3CR-A8-AC100-240",
+          "timerPreset": 4
+        }
+      ],
+      "wires": [
+        {
+          "id": "w_gapjgsq_xktn",
+          "x1": 80,
+          "y1": 100,
+          "x2": 140,
+          "y2": 100,
+          "netId": "sheet_ivfbpse_xktn_NET_L1",
+          "wireNumber": "+24V"
+        },
+        {
+          "id": "w_0agvion_xktn",
+          "x1": 180,
+          "y1": 100,
+          "x2": 240,
+          "y2": 100,
+          "netId": "sheet_ivfbpse_xktn_NET_1",
+          "wireNumber": "101"
+        },
+        {
+          "id": "w_9s3w13s_xktn",
+          "x1": 280,
+          "y1": 100,
+          "x2": 360,
+          "y2": 100,
+          "netId": "sheet_ivfbpse_xktn_NET_2",
+          "wireNumber": "102"
+        },
+        {
+          "id": "w_l52m2u5_xktn",
+          "x1": 400,
+          "y1": 100,
+          "x2": 480,
+          "y2": 100,
+          "netId": "sheet_ivfbpse_xktn_NET_3",
+          "wireNumber": "103"
+        },
+        {
+          "id": "w_j9xhdh0_xktn",
+          "x1": 520,
+          "y1": 100,
+          "x2": 620,
+          "y2": 100,
+          "netId": "sheet_ivfbpse_xktn_NET_4",
+          "wireNumber": "104"
+        },
+        {
+          "id": "w_xddqbo3_xktn",
+          "x1": 660,
+          "y1": 100,
+          "x2": 760,
+          "y2": 100,
+          "netId": "sheet_ivfbpse_xktn_NET_4",
+          "wireNumber": "104"
+        },
+        {
+          "id": "w_2dte5lt_xktn",
+          "x1": 800,
+          "y1": 100,
+          "x2": 880,
+          "y2": 100,
+          "netId": "sheet_ivfbpse_xktn_NET_L2",
+          "wireNumber": "0V"
+        },
+        {
+          "id": "w_d0warq8_xktn",
+          "x1": 440,
+          "y1": 100,
+          "x2": 440,
+          "y2": 200,
+          "netId": "sheet_ivfbpse_xktn_NET_3",
+          "wireNumber": "103"
+        },
+        {
+          "id": "w_1gb6i2j_xktn",
+          "x1": 440,
+          "y1": 200,
+          "x2": 480,
+          "y2": 200,
+          "netId": "sheet_ivfbpse_xktn_NET_3",
+          "wireNumber": "103"
+        },
+        {
+          "id": "w_s0d7w4y_xktn",
+          "x1": 520,
+          "y1": 200,
+          "x2": 560,
+          "y2": 200,
+          "netId": "sheet_ivfbpse_xktn_NET_4",
+          "wireNumber": "104"
+        },
+        {
+          "id": "w_1po8cp3_xktn",
+          "x1": 560,
+          "y1": 200,
+          "x2": 560,
+          "y2": 100,
+          "netId": "sheet_ivfbpse_xktn_NET_4",
+          "wireNumber": "104"
+        },
+        {
+          "id": "w_eejwex1_xktn",
+          "x1": 80,
+          "y1": 300,
+          "x2": 220,
+          "y2": 300,
+          "netId": "sheet_ivfbpse_xktn_NET_L1",
+          "wireNumber": "+24V"
+        },
+        {
+          "id": "w_j7vgcx9_xktn",
+          "x1": 260,
+          "y1": 300,
+          "x2": 400,
+          "y2": 300,
+          "netId": "sheet_ivfbpse_xktn_NET_5",
+          "wireNumber": "105"
+        },
+        {
+          "id": "w_wu5kmu0_xktn",
+          "x1": 440,
+          "y1": 300,
+          "x2": 580,
+          "y2": 300,
+          "netId": "sheet_ivfbpse_xktn_NET_6",
+          "wireNumber": "106"
+        },
+        {
+          "id": "w_9se2ylf_xktn",
+          "x1": 620,
+          "y1": 300,
+          "x2": 760,
+          "y2": 300,
+          "netId": "sheet_ivfbpse_xktn_NET_6",
+          "wireNumber": "106"
+        },
+        {
+          "id": "w_22nwcvu_xktn",
+          "x1": 800,
+          "y1": 300,
+          "x2": 880,
+          "y2": 300,
+          "netId": "sheet_ivfbpse_xktn_NET_L2",
+          "wireNumber": "0V"
+        },
+        {
+          "id": "w_n4cwl6s_xktn",
+          "x1": 80,
+          "y1": 400,
+          "x2": 220,
+          "y2": 400,
+          "netId": "sheet_ivfbpse_xktn_NET_L1",
+          "wireNumber": "+24V"
+        },
+        {
+          "id": "w_ey1sshx_xktn",
+          "x1": 260,
+          "y1": 400,
+          "x2": 400,
+          "y2": 400,
+          "netId": "sheet_ivfbpse_xktn_NET_7",
+          "wireNumber": "107"
+        },
+        {
+          "id": "w_b19omkj_xktn",
+          "x1": 440,
+          "y1": 400,
+          "x2": 580,
+          "y2": 400,
+          "netId": "sheet_ivfbpse_xktn_NET_8",
+          "wireNumber": "108"
+        },
+        {
+          "id": "w_ggsfpw5_xktn",
+          "x1": 620,
+          "y1": 400,
+          "x2": 760,
+          "y2": 400,
+          "netId": "sheet_ivfbpse_xktn_NET_8",
+          "wireNumber": "108"
+        },
+        {
+          "id": "w_bogg6hu_xktn",
+          "x1": 800,
+          "y1": 400,
+          "x2": 880,
+          "y2": 400,
+          "netId": "sheet_ivfbpse_xktn_NET_L2",
+          "wireNumber": "0V"
+        },
+        {
+          "id": "w_tw6aezq_xktn",
+          "x1": 80,
+          "y1": 500,
+          "x2": 220,
+          "y2": 500,
+          "netId": "sheet_ivfbpse_xktn_NET_L1",
+          "wireNumber": "+24V"
+        },
+        {
+          "id": "w_qhuxfaf_xktn",
+          "x1": 260,
+          "y1": 500,
+          "x2": 500,
+          "y2": 500,
+          "netId": "sheet_ivfbpse_xktn_NET_9",
+          "wireNumber": "109"
+        },
+        {
+          "id": "w_q9i4zeo_xktn",
+          "x1": 540,
+          "y1": 500,
+          "x2": 760,
+          "y2": 500,
+          "netId": "sheet_ivfbpse_xktn_NET_9",
+          "wireNumber": "109"
+        },
+        {
+          "id": "w_tdlbydf_xktn",
+          "x1": 800,
+          "y1": 500,
+          "x2": 880,
+          "y2": 500,
+          "netId": "sheet_ivfbpse_xktn_NET_L2",
+          "wireNumber": "0V"
+        },
+        {
+          "id": "w_r0kzm0a_xktn",
+          "x1": 80,
+          "y1": 600,
+          "x2": 220,
+          "y2": 600,
+          "netId": "sheet_ivfbpse_xktn_NET_L1",
+          "wireNumber": "+24V"
+        },
+        {
+          "id": "w_dl7u7hi_xktn",
+          "x1": 260,
+          "y1": 600,
+          "x2": 760,
+          "y2": 600,
+          "netId": "sheet_ivfbpse_xktn_NET_10",
+          "wireNumber": "110"
+        },
+        {
+          "id": "w_ktp2vfp_xktn",
+          "x1": 800,
+          "y1": 600,
+          "x2": 880,
+          "y2": 600,
+          "netId": "sheet_ivfbpse_xktn_NET_L2",
+          "wireNumber": "0V"
+        }
+      ]
+    },
+    {
+      "id": "sheet_hgb35iv_xktn",
+      "number": 2,
+      "name": "PLC Digital I/O Map",
+      "voltageLabel": "24VDC",
+      "l1Label": "+24V",
+      "l2Label": "0V",
+      "rungCount": 4,
+      "components": [
+        {
+          "id": "c_soupt2i_xktn",
+          "type": "estop_nc",
+          "x": 220,
+          "y": 100,
+          "tag": "ES2",
+          "description": "PLC Safety Input E-Stop",
+          "manufacturer": "Schneider Electric",
+          "partNumber": "XB4BS8442"
+        },
+        {
+          "id": "c_8u1q4sx_xktn",
+          "type": "terminal",
+          "x": 460,
+          "y": 100,
+          "tag": "TB2-1",
+          "description": "PLC DI0.0 Field Terminal",
+          "manufacturer": "Phoenix Contact",
+          "partNumber": "UT 2,5 (3044076)",
+          "terminalStrip": "TB2",
+          "terminalNumber": "1"
+        },
+        {
+          "id": "c_o23yzmm_xktn",
+          "type": "plc_in",
+          "x": 780,
+          "y": 100,
+          "tag": "DI0",
+          "description": "PLC Input: Safety Healthy",
+          "manufacturer": "Allen-Bradley",
+          "partNumber": "6ES7221-1BH32-0XB0",
+          "plcAddress": "%IX0.0"
+        },
+        {
+          "id": "c_kk3e9je_xktn",
+          "type": "pb_no",
+          "x": 220,
+          "y": 200,
+          "tag": "PB3",
+          "description": "Cycle Start Push Button",
+          "manufacturer": "Allen-Bradley",
+          "partNumber": "800F-MP3D10"
+        },
+        {
+          "id": "c_cl748oi_xktn",
+          "type": "terminal",
+          "x": 460,
+          "y": 200,
+          "tag": "TB2-2",
+          "description": "PLC DI0.1 Field Terminal",
+          "manufacturer": "Phoenix Contact",
+          "partNumber": "UT 2,5 (3044076)",
+          "terminalStrip": "TB2",
+          "terminalNumber": "2"
+        },
+        {
+          "id": "c_ie7cyk2_xktn",
+          "type": "plc_in",
+          "x": 780,
+          "y": 200,
+          "tag": "DI1",
+          "description": "PLC Input: Cycle Start",
+          "manufacturer": "Allen-Bradley",
+          "partNumber": "6ES7221-1BH32-0XB0",
+          "plcAddress": "%IX0.1"
+        },
+        {
+          "id": "c_mhhil18_xktn",
+          "type": "plc_out",
+          "x": 220,
+          "y": 300,
+          "tag": "DO0",
+          "description": "PLC Output %QX0.0 Command",
+          "manufacturer": "Siemens",
+          "partNumber": "6ES7222-1HF32-0XB0",
+          "plcAddress": "%QX0.0"
+        },
+        {
+          "id": "c_hnnnvox_xktn",
+          "type": "terminal",
+          "x": 460,
+          "y": 300,
+          "tag": "TB2-3",
+          "description": "Output Coil Terminal",
+          "manufacturer": "Phoenix Contact",
+          "partNumber": "UT 2,5 (3044076)",
+          "terminalStrip": "TB2",
+          "terminalNumber": "3"
+        },
+        {
+          "id": "c_9uvzcht_xktn",
+          "type": "coil_motor",
+          "x": 780,
+          "y": 300,
+          "tag": "M1",
+          "description": "PLC Controlled Motor Starter",
+          "manufacturer": "Allen-Bradley",
+          "partNumber": "LC1D18G7"
+        },
+        {
+          "id": "c_u9h6lr0_xktn",
+          "type": "contact_no",
+          "x": 220,
+          "y": 400,
+          "tag": "M1",
+          "description": "Starter Aux Feedback",
+          "manufacturer": "Schneider Electric",
+          "partNumber": "LADN11",
+          "parentTag": "M1"
+        },
+        {
+          "id": "c_av80bu1_xktn",
+          "type": "pilot_light",
+          "x": 780,
+          "y": 400,
+          "tag": "PL2",
+          "description": "PLC Sequence Active Lamp",
+          "manufacturer": "Allen-Bradley",
+          "partNumber": "800F-P3G",
+          "pilotColor": "amber"
+        }
+      ],
+      "wires": [
+        {
+          "id": "w_grxrbcn_xktn",
+          "x1": 80,
+          "y1": 100,
+          "x2": 200,
+          "y2": 100,
+          "netId": "sheet_hgb35iv_xktn_NET_L1",
+          "wireNumber": "+24V"
+        },
+        {
+          "id": "w_wqki95u_xktn",
+          "x1": 240,
+          "y1": 100,
+          "x2": 440,
+          "y2": 100,
+          "netId": "sheet_hgb35iv_xktn_NET_1",
+          "wireNumber": "201"
+        },
+        {
+          "id": "w_ttyejqv_xktn",
+          "x1": 480,
+          "y1": 100,
+          "x2": 760,
+          "y2": 100,
+          "netId": "sheet_hgb35iv_xktn_NET_1",
+          "wireNumber": "201"
+        },
+        {
+          "id": "w_btx7eko_xktn",
+          "x1": 800,
+          "y1": 100,
+          "x2": 880,
+          "y2": 100,
+          "netId": "sheet_hgb35iv_xktn_NET_L2",
+          "wireNumber": "0V"
+        },
+        {
+          "id": "w_7rcotau_xktn",
+          "x1": 80,
+          "y1": 200,
+          "x2": 200,
+          "y2": 200,
+          "netId": "sheet_hgb35iv_xktn_NET_L1",
+          "wireNumber": "+24V"
+        },
+        {
+          "id": "w_nogw8l5_xktn",
+          "x1": 240,
+          "y1": 200,
+          "x2": 440,
+          "y2": 200,
+          "netId": "sheet_hgb35iv_xktn_NET_2",
+          "wireNumber": "202"
+        },
+        {
+          "id": "w_b49slss_xktn",
+          "x1": 480,
+          "y1": 200,
+          "x2": 760,
+          "y2": 200,
+          "netId": "sheet_hgb35iv_xktn_NET_2",
+          "wireNumber": "202"
+        },
+        {
+          "id": "w_g7vdcj6_xktn",
+          "x1": 800,
+          "y1": 200,
+          "x2": 880,
+          "y2": 200,
+          "netId": "sheet_hgb35iv_xktn_NET_L2",
+          "wireNumber": "0V"
+        },
+        {
+          "id": "w_6rpzqjw_xktn",
+          "x1": 80,
+          "y1": 300,
+          "x2": 200,
+          "y2": 300,
+          "netId": "sheet_hgb35iv_xktn_NET_L1",
+          "wireNumber": "+24V"
+        },
+        {
+          "id": "w_xgy1nlu_xktn",
+          "x1": 240,
+          "y1": 300,
+          "x2": 440,
+          "y2": 300,
+          "netId": "sheet_hgb35iv_xktn_NET_3",
+          "wireNumber": "203"
+        },
+        {
+          "id": "w_55fxv4b_xktn",
+          "x1": 480,
+          "y1": 300,
+          "x2": 760,
+          "y2": 300,
+          "netId": "sheet_hgb35iv_xktn_NET_3",
+          "wireNumber": "203"
+        },
+        {
+          "id": "w_z3hbjxf_xktn",
+          "x1": 800,
+          "y1": 300,
+          "x2": 880,
+          "y2": 300,
+          "netId": "sheet_hgb35iv_xktn_NET_L2",
+          "wireNumber": "0V"
+        },
+        {
+          "id": "w_wte51w9_xktn",
+          "x1": 80,
+          "y1": 400,
+          "x2": 200,
+          "y2": 400,
+          "netId": "sheet_hgb35iv_xktn_NET_L1",
+          "wireNumber": "+24V"
+        },
+        {
+          "id": "w_90q0x8w_xktn",
+          "x1": 240,
+          "y1": 400,
+          "x2": 760,
+          "y2": 400,
+          "netId": "sheet_hgb35iv_xktn_NET_4",
+          "wireNumber": "204"
+        },
+        {
+          "id": "w_cmde5r6_xktn",
+          "x1": 800,
+          "y1": 400,
+          "x2": 880,
+          "y2": 400,
+          "netId": "sheet_hgb35iv_xktn_NET_L2",
+          "wireNumber": "0V"
+        }
+      ]
+    }
+  ],
+  "activeSheetId": "sheet_ivfbpse_xktn"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "VoltGrid ECAD",
+  "description": "Industrial Electrical CAD, ladder diagram schematic editor, real-time relay/timer simulator, ERC diagnostics, and multi-platform industrial exporter for Simscape, Simulink, CODESYS, and CADe_SIMU.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
